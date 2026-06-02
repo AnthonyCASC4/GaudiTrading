@@ -1,0 +1,9 @@
+services:
+  gaudi-trading:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - ANALYSIS_INTERVAL=${ANALYSIS_INTERVAL:-60}
+    restart: unless-stopped
