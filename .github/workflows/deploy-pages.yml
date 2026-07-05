@@ -19,9 +19,18 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p .site-content
+          if [ -d docs ]; then
+            cp -R docs/. .site-content/
+          elif [ -f index.html ]; then
+            cp index.html .site-content/
+          else
+            echo "No site content found to publish."
+            exit 1
+          fi
           git checkout --orphan gh-pages
           git rm -rf . || true
-          cp -R docs/. .
+          cp -R .site-content/. .
           git add .
           if git diff --cached --quiet; then
             echo "No changes to deploy."
