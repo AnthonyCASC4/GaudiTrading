@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GaudiTrading Dashboard Preview</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+      .preview-card {
+        max-width: 760px;
+        width: 100%;
+        background: rgba(16, 26, 44, 0.9);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 24px;
+        padding: 32px;
+        box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+      }
+      .preview-card h1 {
+        font-size: 2rem;
+        margin-bottom: 12px;
+      }
+      .preview-card p {
+        color: var(--muted);
+        margin-bottom: 16px;
+      }
+      .preview-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 20px;
+      }
+      .preview-actions a {
+        text-decoration: none;
+      }
+      .badge {
+        display: inline-block;
+        margin-bottom: 16px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(79, 209, 197, 0.16);
+        color: var(--accent);
+        font-size: 0.85rem;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preview-card">
+      <span class="badge">GitHub Pages preview</span>
+      <h1>Open the GaudiTrading experience</h1>
+      <p>
+        This page is a lightweight preview of the product experience. The full interactive dashboard lives in the app itself,
+        and you can open it locally by running the FastAPI app or by visiting the hosted app when deployed.
+      </p>
+      <div class="preview-actions">
+        <a class="btn btn-primary" href="index.html">Back to landing page</a>
+        <a class="btn btn-secondary" href="https://github.com/AnthonyCASC4/GaudiTrading" target="_blank" rel="noreferrer">View source on GitHub</a>
+      </div>
+    </div>
+  </body>
+</html>
